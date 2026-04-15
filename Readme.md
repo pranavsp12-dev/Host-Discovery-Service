@@ -267,6 +267,8 @@ sudo ovs-ofctl -O OpenFlow13 dump-flows s1
 sudo mn -c
 wireshark
 ```
+Genral format for number of switches and host
+sudo mn --topo tree,depth=<switch_levels>,fanout=<children_per_switch> --controller remote --switch ovsk,protocols=OpenFlow13
 
 # References
 
