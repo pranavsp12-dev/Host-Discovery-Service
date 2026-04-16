@@ -275,6 +275,19 @@ sudo mn --topo tree,depth=<switch_levels>,fanout=<children_per_switch> --control
 * Mininet Documentation: [https://mininet.org/walkthrough/](https://mininet.org/walkthrough/)
 * Ryu Documentation: [https://ryu.readthedocs.io/](https://ryu.readthedocs.io/)
 
+  ryu-manager orange.py
+  sudo mn --topo single,3 --controller remote --switch ovsk,protocols=OpenFlow13
+  h1 ping -c 1 h2
+  cat host_database.csv
+
+  leave event
+  h3 ifconfig h3-eth0 down
+
+  rejoin
+  h3 ifconfig h3-eth0 up
+  h3 ping -c 1 h1
+  
+
 # Author
 
 Pranav SP
